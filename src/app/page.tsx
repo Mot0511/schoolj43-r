@@ -1,95 +1,93 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Day from '@/components/day/day'
+import React from 'react'
 
-export default function Home() {
+const Component = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    <>
+      <h2 className="fs-2 my-2">Главная</h2>
+        <div className="row">
+            <div className="col-md-6">
+                <Day />
+                <div className="border rounded p-3 mb-3">
+                    <h2 className="fs-4">Оценки этой недели: 
+                        <span className="fs-5">
+                            <span className="text-success"> 1 пятерок</span>
+                        </span>
+                    </h2>
+                    <hr />
+                        <p className="badge fs-1 bg-success">5</p>
+                        На этой неделе оценок пока нет
+                </div>
+            </div>
+            <div className="col-md-6">
+                {/* <div className="border rounded p-3">
+                    <h2 className="fs-4">Таблица рейтингов</h2>
+                    <hr>
+                    <table className="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Имя Фамилия</th>
+                                <th>Кол-во очков</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Имя Фамилия</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Имя Фамилия</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Имя Фамилия</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Имя Фамилия</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Имя Фамилия</td>
+                                <td>100000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="border rounded p-3 my-2">
+                    <h2 className="fs-4">Твои награды</h2>
+                    <hr>
+                    <div className="d-flex flex-wrap">
+                        <div className="w-25">
+                            <img width="100%" src="https://benza.ru/upload/medialibrary/5ff/золотая%20медаль.png" alt="">
+                            <p className="text-center fs-5">Молодец</p>
+                        </div>
+                        <div className="w-25">
+                            <img width="100%" src="https://benza.ru/upload/medialibrary/5ff/золотая%20медаль.png" alt="">
+                            <p className="text-center fs-5">Молодец</p>
+                        </div>
+                        <div className="w-25">
+                            <img width="100%" src="https://benza.ru/upload/medialibrary/5ff/золотая%20медаль.png" alt="">
+                            <p className="text-center fs-5">Молодец</p>
+                        </div>
+                        <div className="w-25">
+                            <img width="100%" src="https://benza.ru/upload/medialibrary/5ff/золотая%20медаль.png" alt="">
+                            <p className="text-center fs-5">Молодец</p>
+                        </div>
+                        <div className="w-25">
+                            <img width="100%" src="https://benza.ru/upload/medialibrary/5ff/золотая%20медаль.png" alt="">
+                            <p className="text-center fs-5">Молодец</p>
+                        </div>
+                    </div> */}
+                </div>
+            </div>
+    </>
+  )
 }
+export default Component
