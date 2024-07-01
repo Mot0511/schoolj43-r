@@ -1,8 +1,13 @@
 import Day from '@/components/day/day'
 import Weeks_nav from '@/components/weeks_nav/weeks_nav'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Diary = () => {
+
+    useEffect(() => {
+        
+    })
+
     return (
         <>
         <h2 className="fs-2 my-2">Дневник</h2>
