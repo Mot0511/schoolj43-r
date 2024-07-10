@@ -12,10 +12,14 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "fake-useragent": "^1.0.1",
+    "fs": "^0.0.1-security",
     "jquery": "^3.7.1",
+    "js-html-parser": "^1.0.7",
+    "jsdom": "^24.1.0",
     "next": "14.2.4",
     "popper.js": "^1.16.1",
     "react": "^18",
+    "react-cookie": "^7.1.4",
     "react-dom": "^18",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
@@ -23,6 +27,7 @@
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
     "@types/fake-useragent": "^1.0.0",
+    "@types/jsdom": "^21.1.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

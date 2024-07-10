@@ -2,11 +2,21 @@
 
 import React, { useState } from 'react'
 import auth from './auth'
+import { useCookies } from 'react-cookie'
 
 const Login = () => {
 
+  const [cookies, setCookie] = useCookies()
+
   const [login, setLogin] = useState<string>('suvorov.matvej9@gmail.com')
   const [password, setPassword] = useState<string>('motik0511')
+
+  const submit = () => {
+    auth(login, password)
+      .then(cookie => {
+        console.log(cookie)
+      })
+  }
 
   return (
     <div className='mt-5'>
@@ -21,7 +31,7 @@ const Login = () => {
                 <span className="input-group-text">Пароль</span>
                 <input type="password" className="form-control" name='password' value={password} onChange={e => setPassword(e.target.value)}  />
             </div>
-            <input type="button" onClick={() => auth(login, password)} className="btn btn-primary mt-1" value="Войти" />
+            <input type="button" onClick={submit} className="btn btn-primary mt-1" value="Войти" />
         </form>
     </div>
   )
